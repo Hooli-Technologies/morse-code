@@ -1,4 +1,4 @@
-const codes = {
+const codes: any = {
   A: [0, 1],
   B: [1, 0, 0, 0],
   C: [1, 0, 1, 0],
@@ -36,9 +36,5 @@ const codes = {
   9: [1, 1, 1, 1, 0],
   0: [1, 1, 1, 1, 1],
 };
-
-const chars = [...Object.keys(codes)] as const;
-
-export type MorseChar = typeof chars[number];
 
 export default codes;
