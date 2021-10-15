@@ -1,6 +1,8 @@
 <template>
-  <textarea v-model="code" class="bg-red-300"></textarea>
-  <MorseCode :text="code" />
+  <div class="mx-8">
+    <textarea v-model="code" class="rounded-full my-5 p-5"></textarea>
+    <MorseCode :text="code" />
+  </div>
 </template>
 
 <script lang="ts">
@@ -17,13 +19,4 @@ export default class App extends Vue {
 }
 </script>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
+<style lang="scss"></style>
