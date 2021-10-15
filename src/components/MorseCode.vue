@@ -11,7 +11,7 @@
 </template>
 
 <script lang="ts">
-import morseCode, { MorseChar } from "./morseCode";
+import morseCode from "./morseCode";
 import MorseCodeConverter from "./MorseCodeConverter.vue";
 import { Options, Vue } from "vue-class-component";
 
@@ -32,11 +32,11 @@ export default class MorseCode extends Vue {
     return this.text.split(" ").map((word) => word.split(""));
   }
 
-  // get representation() {
-  //   return (code: MorseChar): number[] => {
-  //     return morseCode[code.toUpperCase()];
-  //   };
-  // }
+  get representation() {
+    return (code: string) => {
+      return morseCode[code.toUpperCase()];
+    };
+  }
 }
 </script>
 
