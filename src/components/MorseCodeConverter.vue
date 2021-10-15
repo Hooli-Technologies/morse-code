@@ -13,7 +13,7 @@ import { Options, Vue } from "vue-class-component";
 
 @Options({
   props: {
-    code: String,
+    code: Array,
   },
 })
 export default class MorseCodeConverter extends Vue {
