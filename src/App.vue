@@ -1,18 +1,20 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld msg="Welcome to Your Vue.js + TypeScript App" />
+  <textarea v-model="code" class="bg-red-300"></textarea>
+  <MorseCode :text="code" />
 </template>
 
 <script lang="ts">
 import { Options, Vue } from "vue-class-component";
-import HelloWorld from "./components/HelloWorld.vue";
+import MorseCode from "./components/MorseCode.vue";
 
 @Options({
   components: {
-    HelloWorld,
+    MorseCode,
   },
 })
-export default class App extends Vue {}
+export default class App extends Vue {
+  code = "Hello world";
+}
 </script>
 
 <style lang="scss">
